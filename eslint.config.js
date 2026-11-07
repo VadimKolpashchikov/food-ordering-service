@@ -1,0 +1,67 @@
+import js from '@eslint/js';
+import globals from 'globals';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
+import tseslint from 'typescript-eslint';
+import { defineConfig, globalIgnores } from 'eslint/config';
+import stylistic from '@stylistic/eslint-plugin';
+
+export default defineConfig([
+  globalIgnores(['dist']),
+  stylistic.configs.customize({
+    indent: 2,
+    quotes: 'single',
+    semi: true,
+    jsx: true,
+  }),
+  {
+    files: ['**/*.{ts,tsx}'],
+    plugins: {
+      '@stylistic': stylistic,
+    },
+    extends: [
+      js.configs.recommended,
+      tseslint.configs.recommended,
+      reactHooks.configs.flat.recommended,
+      reactRefresh.configs.vite,
+    ],
+    languageOptions: {
+      globals: globals.browser,
+    },
+    rules: {
+      'max-params': ['error', 2],
+      '@stylistic/exp-jsx-props-style': ['error', {
+        singleLine: { maxItems: 2 },
+        multiLine: { minItems: 3 },
+      }],
+      '@stylistic/jsx-max-props-per-line': 'off',
+      '@stylistic/jsx-first-prop-new-line': 'off',
+      '@stylistic/jsx-closing-bracket-location': ['error', {
+        nonEmpty: 'tag-aligned',
+        selfClosing: 'tag-aligned',
+      }],
+      '@stylistic/arrow-parens': ['error', 'always'],
+      'max-len': ['error', {
+        code: 100,
+        ignoreUrls: true,
+        ignoreStrings: true,
+        ignoreTemplateLiterals: true,
+      }],
+      '@stylistic/object-property-newline': ['error', {
+        allowAllPropertiesOnSameLine: true,
+      }],
+      '@stylistic/object-curly-newline': ['error', {
+        ObjectExpression: {
+          minProperties: 3,
+          multiline: true,
+          consistent: true,
+        },
+        ObjectPattern: {
+          minProperties: 3,
+          multiline: true,
+          consistent: true,
+        },
+      }],
+    },
+  },
+]);
