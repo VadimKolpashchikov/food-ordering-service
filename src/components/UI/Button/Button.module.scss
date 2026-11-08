@@ -1,8 +1,5 @@
 .button {
-  padding: 18px 58px;
   border-radius: 28px;
-  font-family: inherit;
-  line-height: 25px;
   transition: background 0.25s;
   cursor: pointer;
 
@@ -12,6 +9,22 @@
 
     &:hover {
       background: $primary-color-600;
+    }
+  }
+
+  &_size {
+    &-xl {
+      padding: 20px 60px;
+      font-size: 15px;
+      line-height: 25px;
+      font-weight: 600;
+      letter-spacing: 8%;
+      text-transform: uppercase;
+    }
+
+    &-l {
+      padding: 10px 25px;
+      line-height: 22px;
     }
   }
 }

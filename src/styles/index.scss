@@ -11,11 +11,11 @@ html {
 
 body {
   background: $light-color-0;
-  font-family: "Open Sans", "sans-serif";
+  font-family: $main-font-family;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
-  color: $black-color-0;
+  color: $text-color-0;
 }
 
 #root {

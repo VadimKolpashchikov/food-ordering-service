@@ -1,18 +1,24 @@
 @use "sass:color";
 
+// Colors
 $light-color-0: #ffffff;
 $light-color-200: #f1f2f3;
-$light-color-400: #eeeeee;
-$light-color-500: #d5d5d9;
-$light-color-600: #d4d6e0;
 
-$gray-color-400: #bebebe;
-$gray-color-500: #9796a1;
-$gray-color-600: #9ea1b1;
-
-$black-color-0: #000000;
+$text-color-0: #000000;
+$text-color-600: #c4c4c4;
 
 $primary-color-400: #fe724c;
 $primary-color-600: #d46040;
 
+$secondary-color-200: #d5d5d9;
+$secondary-color-400: #bebebe;
+$secondary-color-500: #9796a1;
+$secondary-color-600: #9ea1b1;
+
+$border-color-200: #eeeeee;
+$border-color-400: #d4d6e0;
+
 $danger-color-400: #ff3600;
+
+// Fonts
+$main-font-family: "Open Sans", "sans-serif";
