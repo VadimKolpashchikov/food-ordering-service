@@ -1,7 +1,9 @@
+import Button from './components/UI/Button/Button';
+
 function App() {
   return (
     <div>
-      Start
+      <Button>Кнопка</Button>
     </div>
   );
 }

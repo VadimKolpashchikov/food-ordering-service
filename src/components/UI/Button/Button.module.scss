@@ -1,0 +1,17 @@
+.button {
+  padding: 18px 58px;
+  border-radius: 28px;
+  font-family: inherit;
+  line-height: 25px;
+  transition: background 0.25s;
+  cursor: pointer;
+
+  &_primary {
+    color: $light-color-0;
+    background: $primary-color-400;
+
+    &:hover {
+      background: $primary-color-600;
+    }
+  }
+}
