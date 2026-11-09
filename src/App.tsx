@@ -1,5 +1,7 @@
+import { RouterProvider } from 'react-router';
 import Button from './components/UI/Button/Button';
 import Input from './components/UI/Input/Input';
+import router from './router';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
         label="Ваш пароль"
         placeholder="Пароль"
       />
+
+      <RouterProvider router={router} />
     </div>
   );
 }
