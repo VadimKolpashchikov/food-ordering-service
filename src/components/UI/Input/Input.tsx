@@ -8,19 +8,32 @@ function Input({
   className,
   invalid = false,
   label,
+  prepend,
+  append,
+  appearance = 'big',
   ...props
 }: InputProps) {
   return (
     <FormField invalid={invalid} label={label}>
-      <input
-        {...props}
-        type={type}
-        className={cn(
-          className,
-          styles['input'],
-          { [styles['input_invalid']]: invalid },
-        )}
-      />
+      <div className={cn(
+        className,
+        styles['input-wrap'],
+        styles[`input_${appearance}`],
+        {
+          [styles['invalid']]: invalid,
+          [styles['with-prepend']]: prepend,
+          [styles['with-append']]: append,
+        },
+      )}
+      >
+        {prepend}
+        <input
+          {...props}
+          type={type}
+          className={styles['input']}
+        />
+        {append}
+      </div>
     </FormField>
   );
 }

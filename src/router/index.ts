@@ -1,5 +1,5 @@
 import { createBrowserRouter } from 'react-router';
-import MenuPage from './pages/Menu/Menu';
+import MenuPage from './pages/Menu/MenuPage';
 import CartPage from './pages/Cart/Cart';
 import NotFoundPage from './pages/NotFound/NotFoundPage';
 import MenuLayout from '../layouts/MenuLayout/MenuLayout';

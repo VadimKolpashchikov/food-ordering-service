@@ -1,0 +1,12 @@
+.column-page-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    gap: 36px;
+  }
+}

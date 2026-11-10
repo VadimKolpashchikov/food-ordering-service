@@ -32,7 +32,7 @@ export default defineConfig([
       'max-params': ['error', 2],
       '@stylistic/exp-jsx-props-style': ['error', {
         singleLine: { maxItems: 2 },
-        multiLine: { minItems: 3 },
+        multiLine: { minItems: 0 },
       }],
       '@stylistic/jsx-max-props-per-line': 'off',
       '@stylistic/jsx-first-prop-new-line': 'off',

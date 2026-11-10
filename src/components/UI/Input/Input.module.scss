@@ -1,23 +1,42 @@
-.input {
-  width: 100%;
-  padding: 20px;
-  background: none;
-  outline: none;
+.input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   border: 1px solid $border-color-200;
   border-radius: 10px;
   box-shadow: 15px 20px 45px 0 rgba(233, 233, 233, 0.25);
-  color: $text-color-0;
-  line-height: 22px;
+  cursor: pointer;
 
-  &:focus,
+  &:focus-within,
   &:hover:not(.input_invalid) {
     outline: none;
     border: 1px solid $border-color-400;
   }
 
-  &_invalid {
+  &.invalid {
     border-color: $danger-color-400;
   }
+
+  &.input_big {
+    padding: 20px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  &.input_small {
+    padding: 16px;
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+.input {
+  width: 100%;
+  padding: 0;
+  background: none;
+  outline: none;
+  border: none;
+  color: $text-color-0;
 
   &::placeholder {
     color: $text-color-600;
