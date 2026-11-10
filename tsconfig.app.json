@@ -23,7 +23,16 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    /* Path Aliases */
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "@svg/*": [
+        "./src/assets/svg/*"
+      ]
+    }
   },
   "include": [
     "src"

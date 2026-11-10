@@ -12,6 +12,12 @@
     }
   }
 
+  &_icon {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+
   &_size {
     &-xl {
       padding: 20px 60px;
@@ -25,6 +31,27 @@
     &-l {
       padding: 10px 25px;
       line-height: 22px;
+    }
+
+    &-m {
+      padding: 8px 20px;
+      line-height: 1;
+
+      &.button_icon {
+        gap: 8px;
+      }
+
+      &.button_icon-only {
+        padding-inline: 8px;
+      }
+
+      &.button_icon-start {
+        padding-inline-start: 8px;
+      }
+
+      &.button_icon-only {
+        padding-inline-end: 8px;
+      }
     }
   }
 }

@@ -1,0 +1,80 @@
+.side-menu {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &__user-info {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  &__user-avatar {
+    display: flex;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 8px 40px 0 rgba(255, 197, 41, 0.25);
+  }
+
+  &__user-name {
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 700;
+  }
+
+  &__user-email {
+    margin-top: 8px;
+    font-size: 14px;
+    line-height: 19px;
+    color: $secondary-color-600;
+  }
+
+  &__menu-items {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 45px;
+  }
+
+  &__menu-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding-inline: 2px;
+    color: $text-color-0;
+    text-decoration: none;
+    transition: 0.1s all;
+
+    &.active,
+    &:hover {
+      color: $primary-color-400;
+    }
+  }
+
+  &__menu-item-counter {
+    position: relative;
+    color: $light-color-0;
+    font-size: 12px;
+    line-height: 14px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 20px;
+      min-height: 20px;
+      width: calc(100% + 12px);
+      height: calc(100% + 6px);
+      border-radius: 1em;
+      transform: translate(-50%, -50%);
+      background-color: $primary-color-400;
+      z-index: -1;
+    }
+  }
+
+  &__actions {
+    margin-top: auto;
+  }
+}

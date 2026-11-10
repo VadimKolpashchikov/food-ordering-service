@@ -8,6 +8,7 @@ function Button({
   children,
   className,
   size = 'l',
+  icon,
   ...props
 }: ButtonProps) {
   return (
@@ -15,10 +16,13 @@ function Button({
       {...props}
       type={type}
       className={cn(
+        className,
         styles['button'],
         styles[`button_${face}`],
         styles[`button_size-${size}`],
-        className)}
+        { [styles[`button_icon`]]: icon },
+        { [styles[`button_icon-${icon}`]]: icon },
+      )}
     >
       {children}
     </button>

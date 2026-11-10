@@ -14,3 +14,12 @@
   font-weight: 600;
   src: url("/fonts/open-sans-v44-cyrillic_latin-600.woff2") format("woff2");
 }
+
+/* open-sans-700 - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/open-sans-v44-cyrillic_latin-700.woff2") format("woff2");
+}

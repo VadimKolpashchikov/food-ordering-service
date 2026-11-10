@@ -19,8 +19,12 @@ body {
 }
 
 #root {
+  display: flex;
   width: 100%;
-  min-height: 100vh;
+  max-width: 1055px;
+  margin: 0 auto;
+  height: 100vh;
+  overflow: hidden;
 }
 
 p {

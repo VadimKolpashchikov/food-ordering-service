@@ -1,0 +1,25 @@
+@use "./_variables.scss" as *;
+
+@mixin scroll {
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 2px;
+    height: 0px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $light-color-200;
+    border-radius: 2px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $secondary-color-200;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: $secondary-color-600;
+  }
+}
