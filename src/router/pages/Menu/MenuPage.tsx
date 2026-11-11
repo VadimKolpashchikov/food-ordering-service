@@ -3,6 +3,8 @@ import Title from '@/components/UI/Title/Title';
 import ColumnPageLayout from '@/layouts/ColumnPageLayout/ColumnPageLayout';
 import SearchSvg from '@/assets/svg/search.svg?react';
 import styles from './MenuPage.module.scss';
+import { ProductList } from '@/components/product/ProductList/ProductList';
+import { products } from '@/mockData';
 
 export default function MenuPage() {
   return (
@@ -20,7 +22,7 @@ export default function MenuPage() {
         </>
       )}
     >
-      <div>MENU PAGE 1234567890 MENU PAGE</div>
+      <ProductList items={products} />
     </ColumnPageLayout>
   );
 }

@@ -1,0 +1,39 @@
+.not-found-page {
+  &__image-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+
+    img {
+      animation: spinWobble 3s ease-in-out infinite;
+      transform-origin: center center;
+    }
+  }
+}
+
+@keyframes spinWobble {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(20deg);
+  }
+
+  60% {
+    transform: rotate(360deg);
+  }
+
+  72% {
+    transform: rotate(345deg);
+  }
+  84% {
+    transform: rotate(370deg);
+  }
+  92% {
+    transform: rotate(356deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

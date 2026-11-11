@@ -1,0 +1,42 @@
+export const products = [
+  {
+    id: 1,
+    title: 'Наслаждение',
+    description: 'Салями, руккола, помидоры, оливки',
+    price: 300,
+    rating: 4.5,
+    image: '/images/product1.png',
+  },
+  {
+    id: 2,
+    title: 'Наслаждение',
+    description: 'Салями, руккола, помидоры, оливки',
+    price: 400,
+    rating: 4.5,
+    image: '/images/product1.png',
+  },
+  {
+    id: 3,
+    title: 'Наслаждение',
+    description: 'Салями, руккола, помидоры, оливки',
+    price: 400,
+    rating: 4.5,
+    image: '/images/product1.png',
+  },
+  {
+    id: 4,
+    title: 'Наслаждение',
+    description: 'Салями, руккола, помидоры, оливки',
+    price: 400,
+    rating: 4.5,
+    image: '/images/product1.png',
+  },
+  {
+    id: 5,
+    title: 'Наслаждение',
+    description: 'Салями, руккола, помидоры, оливки',
+    price: 400,
+    rating: 4.5,
+    image: '/images/product1.png',
+  },
+];

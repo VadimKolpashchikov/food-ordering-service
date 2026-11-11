@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router';
-import { routeNames } from '../../router/routeNames';
+import routes from '../../router/routes.ts';
 import styles from './SideMenu.module.scss';
 import Button from '../UI/Button/Button';
 import CartSvg from '@/assets/svg/cart.svg?react';
@@ -26,7 +26,7 @@ export default function SideMenu() {
         <NavLink className={({ isActive }) => cn(
           styles['side-menu__menu-item'],
           { [styles.active]: isActive },
-        )} to={routeNames.main.path}
+        )} to={routes.main.path}
         >
           <MenuSvg />
           Меню
@@ -34,7 +34,7 @@ export default function SideMenu() {
         <NavLink className={({ isActive }) => cn(
           styles['side-menu__menu-item'],
           { [styles.active]: isActive },
-        )} to={routeNames.cart.path}
+        )} to={routes.cart.path}
         >
           <CartSvg />
           Корзина

@@ -1,0 +1,13 @@
+.product-price {
+  display: inline-flex;
+  padding: 4px 10px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  background: $light-color-0;
+  border-radius: 1em;
+
+  &__currency {
+    color: $primary-color-400;
+  }
+}

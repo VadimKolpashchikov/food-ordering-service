@@ -1,0 +1,15 @@
+.product-rating {
+  display: inline-flex;
+  gap: 4px;
+  padding: 8px;
+  box-shadow: 0 6px 24px 0 rgba(254, 114, 76, 0.2);
+  background: $light-color-0;
+  border-radius: 1em;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1;
+
+  &__currency {
+    color: $primary-color-400;
+  }
+}
