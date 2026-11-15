@@ -5,7 +5,7 @@
   border: 1px solid $border-color-200;
   border-radius: 10px;
   box-shadow: 15px 20px 45px 0 rgba(233, 233, 233, 0.25);
-  cursor: pointer;
+  cursor: text;
 
   &:focus-within,
   &:hover:not(.input_invalid) {

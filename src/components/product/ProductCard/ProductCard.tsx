@@ -1,4 +1,4 @@
-import type { IProduct } from '@/types/Product.type';
+import type { IProduct } from '@/types/Product.interface';
 import styles from './ProductCard.module.scss';
 import Title from '@/components/UI/Title/Title';
 import Button from '@/components/UI/Button/Button';
@@ -11,7 +11,7 @@ export default function ProductCard({ data }: { data: IProduct }) {
     <div className={styles['product-card']}>
       <div className={styles['product-card__top']}>
         <div className={styles['product-card__image-wrap']}>
-          <img src={data.image} alt={data.title} />
+          <img src={data.image} alt={data.name} />
         </div>
 
         <div className={styles['product-card__top-info']}>
@@ -23,8 +23,10 @@ export default function ProductCard({ data }: { data: IProduct }) {
       </div>
 
       <div className={styles['product-card__text-wrap']}>
-        <Title level={4}>{data.title}</Title>
-        <p className={styles['product-card__description']}>{data.description}</p>
+        <Title level={4}>{data.name}</Title>
+        <p className={styles['product-card__description']}>
+          {data.ingredients.join(', ')}
+        </p>
       </div>
     </div>
   );

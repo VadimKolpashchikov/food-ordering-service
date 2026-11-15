@@ -1,7 +1,7 @@
 export interface IProduct {
   id: number;
-  title: string;
-  description: string;
+  name: string;
+  ingredients: string[];
   price: number;
   rating: number;
   image: string;

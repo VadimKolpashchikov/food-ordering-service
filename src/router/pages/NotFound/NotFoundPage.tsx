@@ -1,6 +1,6 @@
 import Title from '@/components/UI/Title/Title';
 import ColumnPageLayout from '@/layouts/ColumnPageLayout/ColumnPageLayout';
-import styles from './NotFoundPage.module.scss';
+import Loader from '@/components/Loader/Loader';
 
 export default function NotFoundPage() {
   return (
@@ -11,9 +11,7 @@ export default function NotFoundPage() {
         </>
       )}
     >
-      <div className={styles['not-found-page__image-wrap']}>
-        <img src="/images/pizza-frame.png" alt="Пицца" />
-      </div>
+      <Loader />
     </ColumnPageLayout>
   );
 }
