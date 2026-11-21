@@ -3,10 +3,11 @@
   align-items: center;
   justify-content: center;
   margin: auto;
-  aspect-ratio: 1;
+  height: 100%;
 
   img {
     width: 100%;
+    aspect-ratio: 1;
     max-width: 100%;
     animation: spinWobble 3s ease-in-out infinite;
     transform-origin: center center;

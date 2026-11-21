@@ -8,19 +8,20 @@ import { PREFIX } from '@/const/API';
 import { useCallback, useEffect, useState } from 'react';
 import type { IProduct } from '@/types/Product.interface';
 import Loader from '@/components/Loader/Loader';
-import axios, { AxiosError } from 'axios';
+import axios from 'axios';
+import ErrorMessage from '@/components/ErrorMessage/ErrorMessage';
 
 export default function MenuPage() {
   const [products, setProducts] = useState<IProduct[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [errorMessage, setErrorMessage] = useState<string>('');
+  const [error, setError] = useState<unknown>(null);
 
   const getProducts = useCallback(async () => {
     setIsLoading(true);
-    setErrorMessage('');
+    setError(null);
     try {
       await new Promise((resolve) => {
-        setTimeout(resolve, 2000);
+        setTimeout(resolve, 500);
       });
       const { data } = await axios.get<IProduct[]>(`${PREFIX}/products/`);
 
@@ -30,9 +31,7 @@ export default function MenuPage() {
     }
     catch (e) {
       console.error(e);
-      if (e instanceof AxiosError) {
-        setErrorMessage(e.message);
-      }
+      setError(e);
     }
     setIsLoading(false);
   }, []);
@@ -59,15 +58,9 @@ export default function MenuPage() {
     >
       {isLoading && (<Loader />)}
 
-      {errorMessage && (
-        <Title className={styles['menu-page__error']} level={5}>
-          Error:
-          {' '}
-          {errorMessage}
-        </Title>
-      )}
+      {!!error && <ErrorMessage error={error} />}
 
-      {!isLoading && !errorMessage && (<ProductList items={products} />)}
+      {!isLoading && !error && (<ProductList items={products} />)}
     </ColumnPageLayout>
   );
 }
